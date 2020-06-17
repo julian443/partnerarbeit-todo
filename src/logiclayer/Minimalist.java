@@ -13,6 +13,8 @@ public class Minimalist implements MinimalistFunctions {
 
     private TodoDAO todoDAO;
 
+    // TODO FUNCTIONS
+
     public void addTodo(TodoDTO todoDTO, ListDTO listDTO) {
         todoDAO.addTodo(listDTO, todoDTO);
     }
@@ -24,6 +26,8 @@ public class Minimalist implements MinimalistFunctions {
     public void editTodo(TodoDTO todoDTO, int listId) {
 
     }
+
+    // LIST FUNCTIONS
 
     public void addList(ListDTO list) {
         listsDAO.addList(list);
