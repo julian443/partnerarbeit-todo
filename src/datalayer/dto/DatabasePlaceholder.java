@@ -62,6 +62,7 @@ public class DatabasePlaceholder {
     public void addTodoToList(ListDTO list, TodoDTO todo) {
         // Would be an SQL query but has to be substitued by Java Code
         list.getTodos().add(todo);
+        System.out.println(list.getName());
     }
 
     public ListDTO getList_schule() {
