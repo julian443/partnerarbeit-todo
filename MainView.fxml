@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000;" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="mainList1" layoutY="6.0" prefHeight="361.0" prefWidth="600.0" />
+            <Separator layoutX="206.0" layoutY="6.0" orientation="VERTICAL" prefHeight="362.0" prefWidth="9.0" />
+            <Separator layoutX="385.0" layoutY="6.0" orientation="VERTICAL" prefHeight="360.0" prefWidth="0.0" />
+            <Label fx:id="showingTxt" layoutX="14.0" layoutY="337.0" prefHeight="17.0" prefWidth="172.0" text="Now showing x Todo's" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #000;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnCreate" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #ff0000;" text="Create Todo's" textFill="WHITE" />
+            <Button fx:id="btnList1" layoutX="171.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: #000;" text="List1" textFill="WHITE" />
+            <Button fx:id="btnList2" layoutX="280.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: #000;" text="List2" textFill="WHITE" />
+            <Button fx:id="btnList3" layoutX="405.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: #000;" text="List3" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
