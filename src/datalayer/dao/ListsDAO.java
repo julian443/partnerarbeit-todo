@@ -9,17 +9,17 @@ import java.util.ArrayList;
 public class ListsDAO {
 
     public ArrayList<ListDTO> getAllLists() {
-        DatabasePlaceholder databasePlaceholder = new DatabasePlaceholder();
+        DatabasePlaceholder databasePlaceholder = DatabasePlaceholder.getInstance();
         return databasePlaceholder.getLists();
     }
 
     public void addList(ListDTO list) {
-        DatabasePlaceholder databasePlaceholder = new DatabasePlaceholder();
+        DatabasePlaceholder databasePlaceholder = DatabasePlaceholder.getInstance();
         databasePlaceholder.addList(list);
     }
 
     public void deleteList(ListDTO list) {
-        DatabasePlaceholder databasePlaceholder = new DatabasePlaceholder();
+        DatabasePlaceholder databasePlaceholder = DatabasePlaceholder.getInstance();
         databasePlaceholder.deleteList(list);
     }
 

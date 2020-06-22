@@ -4,9 +4,8 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class DatabasePlaceholder {
-
-
+public class DatabasePlaceholder
+{
     private TodoDTO todo1 = new TodoDTO(1, "Finish Java Project", "23.06.2020", 2);
 
     private TodoDTO todo2 = new TodoDTO(2, "Buy groceries", "16.06.2020", 2);
@@ -20,22 +19,36 @@ public class DatabasePlaceholder {
     private TodoDTO todo6 = new TodoDTO(6, "Travel to America", "23.07.2021", 4);
 
 
-    private ListDTO list_schule = new ListDTO(1, "schule");
+    private ListDTO list_alltag = new ListDTO(1, "alltag");
 
-    private ListDTO list_alltag = new ListDTO(2, "alltag");
+    private ListDTO list_schule = new ListDTO(2, "schule");
 
     private ListDTO list_sonstig = new ListDTO(3, "sonstig");
 
     private ArrayList<ListDTO> lists = new ArrayList<>(Arrays.asList(getList_schule(), getList_alltag(), getList_sonstig()));
-
-    public DatabasePlaceholder() {
+    private static DatabasePlaceholder instance;
+    private DatabasePlaceholder()
+    {
         ArrayList<TodoDTO> todo_schule = new ArrayList<>(Arrays.asList(todo1, todo4, todo5));
         ArrayList<TodoDTO> todo_alltag = new ArrayList<>(Arrays.asList(todo2, todo3));
         ArrayList<TodoDTO> todo_sonstig = new ArrayList<>(Arrays.asList(todo6));
 
-       getList_schule().setTodos(todo_schule);
-       getList_schule().setTodos(todo_alltag);
-       getList_schule().setTodos(todo_sonstig);
+        getList_schule().setTodos(todo_schule);
+        getList_alltag().setTodos(todo_alltag);
+        getList_sonstig().setTodos(todo_sonstig);
+
+        setList_schule(list_schule);
+        setList_alltag(list_alltag);
+        setList_sonstig(list_sonstig);
+    }
+
+    public static DatabasePlaceholder getInstance()
+    {
+        if(instance == null)
+        {
+            instance = new DatabasePlaceholder();
+        }
+        return instance;
     }
 
     public void addList(ListDTO list) {

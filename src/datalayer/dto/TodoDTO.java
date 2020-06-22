@@ -16,4 +16,20 @@ public class TodoDTO {
         this.datum = datum;
         this.urgency = urgency;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public String getDatum() {
+        return datum;
+    }
+
+    public int getUrgency() {
+        return urgency;
+    }
 }
