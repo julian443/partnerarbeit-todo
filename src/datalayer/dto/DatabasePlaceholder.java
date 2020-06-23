@@ -18,6 +18,11 @@ public class DatabasePlaceholder
 
     private TodoDTO todo6 = new TodoDTO(6, "Travel to America", "23.07.2021", 4);
 
+    private UserDTO user1 = new UserDTO("user1", "user1pw");
+
+    private UserDTO user2 = new UserDTO("user2", "user2pw");
+
+    private UserDTO userAdmin = new UserDTO("admin", "adminpw");
 
     private ListDTO list_alltag = new ListDTO(1, "alltag");
 
@@ -26,6 +31,9 @@ public class DatabasePlaceholder
     private ListDTO list_sonstig = new ListDTO(3, "sonstig");
 
     private ArrayList<ListDTO> lists = new ArrayList<>(Arrays.asList(getList_schule(), getList_alltag(), getList_sonstig()));
+
+    private ArrayList<UserDTO> users = new ArrayList<>(Arrays.asList(getUser1(), getUser2(), getUserAdmin()));
+
     private static DatabasePlaceholder instance;
     private DatabasePlaceholder()
     {
@@ -108,5 +116,33 @@ public class DatabasePlaceholder
 
     public void setLists(ArrayList<ListDTO> lists) {
         this.lists = lists;
+    }
+
+    public UserDTO getUser1() {
+        return user1;
+    }
+
+    public void setUser1(UserDTO user1) {
+        this.user1 = user1;
+    }
+
+    public UserDTO getUser2() {
+        return user2;
+    }
+
+    public void setUser2(UserDTO user2) {
+        this.user2 = user2;
+    }
+
+    public UserDTO getUserAdmin() {
+        return userAdmin;
+    }
+
+    public void setUserAdmin(UserDTO userAdmin) {
+        this.userAdmin = userAdmin;
+    }
+
+    public ArrayList<UserDTO> getUsers() {
+        return users;
     }
 }
